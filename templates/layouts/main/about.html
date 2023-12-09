@@ -1,0 +1,26 @@
+{% extends 'layouts/main/index.html' %}
+{% block css %}
+    <link rel="stylesheet" href="/static/css/about.css">{% endblock %}
+{% block main %}
+    <figure>
+        <img src="/static/images/about.png" alt="about">
+        <div class="overlays"></div>
+        <figcaption><b>О нас</b></figcaption>
+    </figure>
+    <div class="about">
+        <h2>Наш сервис самый лучший</h2>
+        <h5>Значимость этих проблем настолько очевидна, что сложившаяся структура организации требуют от нас анализа
+            дальнейших направлений развития. С другой стороны рамки и место обучения кадров позволяет выполнять важные
+            задания по разработке новых предложений.</h5>
+        <h2>Контакты</h2>
+        <h5>samplet@gmail.com</h5>
+        <h2>Соцсети</h2>
+        <ul>
+            <a href=""><img src="/static/images/Frameinstagram.svg" alt="Описание изображения"></a>
+            <a href=""><img src="/static/images/Frametelegram.svg"></a>
+            <a href=""><img src="/static/images/Framewhatsup.svg"></a>
+            <a href=""><img src="/static/images/Framevk.svg"></a>
+            <a href=""><img src="/static/images/Framefacebook.svg"></a>
+        </ul>
+    </div>
+{% endblock %}

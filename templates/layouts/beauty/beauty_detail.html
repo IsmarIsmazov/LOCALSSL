@@ -1,0 +1,41 @@
+{% extends 'layouts/main/index.html' %}
+{% block main %}
+
+    <style>
+        .image > img {
+            width: 740px;
+            height: 454px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .image {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-left: 3%;
+        }
+
+        .beauty {
+            margin: 30px 20px 30px 60px;
+        }
+    </style>
+    <div class="beauty">
+        <div class="detail">
+            <h1>{{ beauty.name }}</h1>
+            <div class="image">
+                <img src="{{ beauty.image.url }}" alt="">
+                <div class="block">
+                    <h2>{{ beauty.price }}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="description">
+            <h1>Описание</h1>
+            <h3>{{ beauty.descriprion }}</h3>
+            <h1>Адресa</h1>
+            <h3>Адрес</h3>
+            <h3>{{ beauty.adress }}</h3>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    {% block css %}
+        <link rel="stylesheet" href="/static/css/index.css">{% endblock %}
+
+    <title>Wemay</title>
+</head>
+<body>
+{% include 'layouts/main/header.html' %}
+<div class="models">
+    <div class="model_login" id="modellogin">
+        <div class="model__box">
+            <button class="model__box_close" id="close-login-model">X</button>
+            {% include 'layouts/users/sign_in.html' %}
+            <button class="login" id="opensignup">Зарегистрироваться</button>
+        </div>
+    </div>
+    <div class="model_signup" id="modelsignup">
+        <div class="model__box">
+            <button class="model__box_close" id="close-signup-model">X</button>
+            {% include 'layouts/users/sign_up.html' %}
+            <button class="login" id="openloginagain">Войти</button>
+
+        </div>
+    </div>
+
+</div>
+
+
+<main>
+    <div class="modal_category" id="modalcategory">
+        <div class="modal__category_box">
+            <button class="model__box_close" id="close-category-modal">X</button>
+            {% include 'layouts/main/categories.html' %}
+        </div>
+    </div>
+</main>
+{% block main %}
+{% endblock %}
+{% include 'layouts/main/footer.html' %}
+<script defer src="/static/js/main.js"></script>
+</body>
+</html>

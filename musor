@@ -1,0 +1,120 @@
+
+МОДАЛЬНОЕ ОКНО
+---------------------------------------------------------------------------------------------------------------------
+{#<div class="model">#}
+{#    <div class="model-window">#}
+{#        <h1>Hello</h1>#}
+{#        <button class="btn-close">X</button>#}
+{#    </div>#}
+{#    <div class="overlay"></div>#}
+{#</div>#}
+
+.model {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.model .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.7;
+    z-index: 0;
+}
+
+.model-window {
+    position: relative;
+    z-index: 2;
+    width: 550px;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, .4);
+    background-color: #F3F3F3;
+    padding: 20px;
+}
+
+.btn-close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    border: none;
+    background: none;
+    opacity: 0.7;
+}
+
+.btn-close:hover {
+    opacity: 1
+}
+        <h1><b>Зарегистрироваться</b></h1>
+        <h2>Введите email</h2>
+        <h2>Введите пароль</h2>
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+CSS
+------------------------------------------------------------------------------------------------------------------------------
+
+.about ul {
+    margin-bottom: 10px;
+    padding-top: 10px;
+    display: inline-table;
+    list-style: none;
+    color: rgba(0, 0, 0, 0.80);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.about h5 {
+    color: grey;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.about {
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.about ul {
+    font-size: 35px;
+}
+
+
+figure {
+    position: relative;
+    display: inline-block;
+}
+
+figcaption {
+    position: absolute;
+    font-size: 32px;
+    top: 50%;
+    left: 50%;
+    color: white;
+    padding: 5px;
+    transform: translate(-50%, -50%);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000 100%);
+}
+--------------------------------------------------------------------------------------------------------------------------------------------

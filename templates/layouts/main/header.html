@@ -1,0 +1,27 @@
+<header>
+    <div class="headers">
+        <button class="categories" id="opencategories">
+            <img src="/static/images/Framebuttoncategories.svg" alt="open categories">
+        </button>
+
+        {% if request.user.is_anonymous %}
+            <button class="login" id="openlogin">Войти</button>
+        {% else %}
+            <button>Профиль</button>
+        {% endif %}
+        <div class="icon">
+            <img src="/static/images/Vectoricon.svg" alt="icon">
+        </div>
+        <ul>
+            <li><a href="/restaurants">Кафе и рестораны</a></li>
+            <li><a href="/entertainment">Развлечение</a></li>
+            <li><a href="/personalitems">Личные вещи</a></li>
+            <li><a href="/beauty">Красота и уход</a></li>
+            <li><a href="/transport">Транспорт</a></li>
+            <li><a href="/realestate">Недвижемость</a></li>
+            <li><a href="#">Медицина</a></li>
+            <li><a href="#">Работа</a></li>
+            <li><a href="#">Услуги</a></li>
+        </ul>
+    </div>
+</header>

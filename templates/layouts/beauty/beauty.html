@@ -1,0 +1,25 @@
+{% extends 'layouts/main/index.html' %}
+{% block css %}
+    <link rel="stylesheet" href="/static/css/beauty.css">{% endblock %}
+{% block main %}
+    <div class="features">
+        {% if beautys %}
+            <div class="title"><h3>Все акции</h3></div>
+            <div class="elements">
+                {% for el in beautys %}
+                    <div class="element">
+                        <a href="{% url 'beauty_detail' el.id %}">
+                            <img src="{{ el.image.url }}" alt="image">
+                        </a>
+                        <p>{{ el.descriprion }}</p>
+                        <p>{{ el.price }}</p>
+
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p>Нет Красоты и ухода</p>
+        {% endif %}
+
+    </div>
+{% endblock %}

@@ -1,0 +1,24 @@
+<div class="featurese">
+    <div class="menu">
+        <h1><a href="/">Главная</a></h1>
+        <h1><a href="/about/">О нас</a></h1>
+        <button class="login" id="openloginagaininmenu">Войти</button>
+    </div>
+    {% if category %}
+        {% for i in category %}
+            <figure>
+                <div class="categories-{{ i.id }}">
+                    <a href="{{ i.link }}">
+                        <img src="{{ i.image.url }}" class="card-img-top" alt="...">
+                        <figcaption class="name"><b>{{ i.name }}</b></figcaption>
+                    </a>
+                </div>
+                <div class="overlay"></div>
+
+            </figure>
+        {% endfor %}
+    {% else %}
+        <h1>у вас нет категории</h1>
+    {% endif %}
+
+</div>
